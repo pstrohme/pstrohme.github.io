@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/Paul%20Strohmeier/Desktop/ma-accantec/Code/mlruns/654653382223571780/34479ea2b96048729fb9101e0b9da9bc/artifacts
+end_time: 1692185940018
+entry_point_name: ''
+experiment_id: '654653382223571780'
+lifecycle_stage: active
+run_id: 34479ea2b96048729fb9101e0b9da9bc
+run_name: RF_20trees_2021Q2
+run_uuid: 34479ea2b96048729fb9101e0b9da9bc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1692185939861
+status: 3
+tags: []
+user_id: Paul Strohmeier

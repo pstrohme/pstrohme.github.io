@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1692113462664
+current_stage: None
+description: null
+last_updated_timestamp: 1692113462664
+name: LR Model newton-cholesky
+run_id: 62f1f073941744ae9585596e4760b79e
+run_link: null
+source: file:///c:/Users/Paul%20Strohmeier/Desktop/ma-accantec/Code/mlruns/142704143808532679/62f1f073941744ae9585596e4760b79e/artifacts/LR
+  Model newton-cholesky
+status: READY
+status_message: null
+user_id: null
+version: 1

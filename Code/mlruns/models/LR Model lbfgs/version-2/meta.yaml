@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1692177608884
+current_stage: None
+description: null
+last_updated_timestamp: 1692177608884
+name: LR Model lbfgs
+run_id: e43bb8421ad249e3bcfa20f749a43aba
+run_link: null
+source: file:///c:/Users/Paul%20Strohmeier/Desktop/ma-accantec/Code/mlruns/532585148427554333/e43bb8421ad249e3bcfa20f749a43aba/artifacts/LR
+  Model lbfgs
+status: READY
+status_message: null
+user_id: null
+version: 2

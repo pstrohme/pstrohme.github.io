@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/Paul%20Strohmeier/Desktop/ma-accantec/Code/mlruns/142704143808532679/ba175106ef1649e5962b9bc7d55c6ede/artifacts
+end_time: 1692182887725
+entry_point_name: ''
+experiment_id: '142704143808532679'
+lifecycle_stage: active
+run_id: ba175106ef1649e5962b9bc7d55c6ede
+run_name: LR_newton-cholesky_2020Q2
+run_uuid: ba175106ef1649e5962b9bc7d55c6ede
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1692182887591
+status: 3
+tags: []
+user_id: Paul Strohmeier

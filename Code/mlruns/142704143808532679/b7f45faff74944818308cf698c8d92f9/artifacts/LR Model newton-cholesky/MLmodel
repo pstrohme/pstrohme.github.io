@@ -1,0 +1,44 @@
+artifact_path: LR Model newton-cholesky
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.11.3
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.2.2
+mlflow_version: 2.5.0
+model_uuid: 9e2bf1300c794d2ba1db637205a738c8
+run_id: b7f45faff74944818308cf698c8d92f9
+signature:
+  inputs: '[{"type": "double", "name": "age"}, {"type": "integer", "name": "country_ca"},
+    {"type": "integer", "name": "country_cn"}, {"type": "integer", "name": "country_de"},
+    {"type": "integer", "name": "country_es"}, {"type": "integer", "name": "country_fr"},
+    {"type": "integer", "name": "country_gb"}, {"type": "integer", "name": "country_it"},
+    {"type": "integer", "name": "country_jp"}, {"type": "integer", "name": "country_nl"},
+    {"type": "long", "name": "country_other_or_unknown"}, {"type": "integer", "name":
+    "country_us"}, {"type": "long", "name": "gender_female"}, {"type": "long", "name":
+    "gender_male"}, {"type": "long", "name": "gender_unknown"}, {"type": "long", "name":
+    "min_one_pres"}, {"type": "long", "name": "quali_consumer_or_nonhealthprof"},
+    {"type": "long", "name": "quali_lawyer"}, {"type": "long", "name": "quali_other_health_prof"},
+    {"type": "long", "name": "quali_pharmacist"}, {"type": "long", "name": "quali_physician"},
+    {"type": "long", "name": "report_from_study"}, {"type": "long", "name": "report_other"},
+    {"type": "long", "name": "report_spontaneous"}, {"type": "long", "name": "report_unknown"},
+    {"type": "integer", "name": "route_intraarterial"}, {"type": "integer", "name":
+    "route_intradermal"}, {"type": "integer", "name": "route_intramuscular"}, {"type":
+    "integer", "name": "route_intrauterine"}, {"type": "integer", "name": "route_intravenous"},
+    {"type": "integer", "name": "route_intravitreal"}, {"type": "integer", "name":
+    "route_nasal"}, {"type": "integer", "name": "route_ophthalmic"}, {"type": "integer",
+    "name": "route_oral"}, {"type": "long", "name": "route_other_or_unknown"}, {"type":
+    "integer", "name": "route_rectal"}, {"type": "integer", "name": "route_respiratory_inhalation"},
+    {"type": "integer", "name": "route_subcutaneous"}, {"type": "integer", "name":
+    "route_sublingual"}, {"type": "integer", "name": "route_topical"}, {"type": "integer",
+    "name": "route_transdermal"}, {"type": "integer", "name": "route_vaginal"}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+utc_time_created: '2023-08-16 09:20:09.068623'

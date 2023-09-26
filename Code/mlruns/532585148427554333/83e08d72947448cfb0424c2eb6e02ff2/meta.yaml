@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/Paul%20Strohmeier/Desktop/ma-accantec/Code/mlruns/532585148427554333/83e08d72947448cfb0424c2eb6e02ff2/artifacts
+end_time: 1692184076391
+entry_point_name: ''
+experiment_id: '532585148427554333'
+lifecycle_stage: active
+run_id: 83e08d72947448cfb0424c2eb6e02ff2
+run_name: LR_lbfgs_2020Q3
+run_uuid: 83e08d72947448cfb0424c2eb6e02ff2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1692184076268
+status: 3
+tags: []
+user_id: Paul Strohmeier
