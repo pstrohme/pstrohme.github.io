@@ -59,10 +59,18 @@ document.addEventListener("DOMContentLoaded", function () {
     .then(response => response.json())
     .then(data => {
         const f1ScoreElement = document.getElementById('f1-score');
-        f1ScoreElement.textContent = `F1-Score: ${data['f1-score']}`;
-    })
-    .catch(error => {
-        console.error('Fehler beim Laden der JSON-Datei:', error);
+        f1ScoreElement.textContent = `${data['f1-score']}`;
+    });
+
+    // Dasselbe mit Trainingszeipunkt (hier den letzten Eintrag der Datei)
+    fetch('../Daten/training_dates.json')
+    .then(response => response.json())
+    .then(data => {
+        const trainingDates = data['training-dates'];
+        const lastTrainingDate = trainingDates[trainingDates.length - 1];
+
+        const trainingDateElement = document.getElementById('training-date');
+        trainingDateElement.textContent = `${lastTrainingDate}`;
     });
     
 
