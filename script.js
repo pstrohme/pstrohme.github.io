@@ -54,12 +54,15 @@ document.addEventListener("DOMContentLoaded", function () {
     // Aktualisieren der Ampel beim Laden der Seite
     updateTrafficLight();
 
-    // Laden der JSON-Datei und Anzeigen des f1-score
+    // Laden der JSON-Datei und Anzeigen des f1-score und des besten Modells
     fetch('../Daten/best_f1.json')
     .then(response => response.json())
     .then(data => {
         const f1ScoreElement = document.getElementById('f1-score');
         f1ScoreElement.textContent = `${data['f1-score']}`;
+
+        const modelElement = document.getElementById('best-model');
+        modelElement.textContent = `${data['model-name']}`;
     });
 
     // Dasselbe mit Trainingszeipunkt (hier den letzten Eintrag der Datei)
