@@ -42,19 +42,28 @@ document.addEventListener("DOMContentLoaded", function () {
         interval = setInterval(nextImage, 10000);
     });
 
-    // Starten Sie den Slider
+    //  Slider starten
     showImage(currentIndex);
 
-    // Annahme: Der Zustand der Ampel wird aus einer JSON-Datei gelesen
-    // Beispielinhalt der JSON-Datei: {"color": "red"}
-
-
-    // Funktion zum Aktualisieren der Ampel basierend auf dem Zustand aus der JSON-Datei
+    // Der Zustand der Ampel wird aus einer JS-Datei gelesen
+    // Funktion zum Aktualisieren der Ampel basierend auf dem Zustand aus der JS-Datei
     function updateTrafficLight() {
         document.querySelector(`.${window.color}`).style.opacity = 1;
     }
 
     // Aktualisieren der Ampel beim Laden der Seite
     updateTrafficLight();
+
+    // Laden der JSON-Datei und Anzeigen des f1-score
+    fetch('../Daten/best_f1.json')
+    .then(response => response.json())
+    .then(data => {
+        const f1ScoreElement = document.getElementById('f1-score');
+        f1ScoreElement.textContent = `F1-Score: ${data['f1-score']}`;
+    })
+    .catch(error => {
+        console.error('Fehler beim Laden der JSON-Datei:', error);
+    });
+    
 
 });
