@@ -3,42 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OS-Monitoring-Dashboard</title>
-    <link rel="icon" href="/Grafiken/Andere Grafiken/monitoring.png" type="image/icon type">
+    <title>Passwortprüfung</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+        }
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            padding: 10px;
+            width: 200px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #c93d3d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #a83232;
+        }
+        .message {
+            margin-top: 15px;
+            font-size: 18px;
+        }
+    </style>
 </head>
 <body>
-    
-    <div class="parent">
-        <div class="traffic-light">
-            <div class="outer">
-                <div class="light red"></div>
-                <div class="light yellow"></div>
-                <div class="light green"></div>
-            </div>
-        </div>
-        <div class="kpi">
-            <div class="kpi-content">Zeitpunkt des letzten Trainings <br> <b id="training-date"></b></div>
-            <div class="kpi-content">Aktuell bestes Modell<br> <b id="best-model"></b></div>
-            <div class="kpi-content">Aktueller F1-Score <br> <b id="f1-score"></b></div>
-        </div>            
-        <div class="slider">
-            <img src="/Grafiken/generated/current/Verteilung_Alter.png" alt="Verteilung_Alter">
-            <img src="/Grafiken/generated/current/Verteilung_Alter_Serious.png" alt="Verteilung_Alter_Serious">
-            <img src="/Grafiken/generated/current/Anteil_Routes_Serious.png" alt="Anteil_Routes_Serious">
-            <img src="/Grafiken/generated/current/Anzahl_Länder_Serious.png" alt="Anzahl_Länder_Serious">
-            <img src="/Grafiken/generated/current/Boxplot_Alter.png" alt="Boxplot_Alter">
-            <div class="btn-group">
-                <button id="prevButton">Vorherige Grafik</button>
-                <button id="nextButton">Nächste Grafik</button>
-            </div>    
-        </div>
-        <div class="div4"><img src="/Grafiken/f1_score/current/f1-score.jpg" alt="F1-Score"></div>
-        <div class="div5"><iframe src="/Reports/current/Drift_Report.html"></iframe></div>
-        <div class="div6"><iframe src="/Reports/current/Quality_Report.html"></iframe></div>
+    <div class="container">
+        <h1>Passwortprüfung</h1>
+        <input type="text" id="inputField" placeholder="Lösungswort eingeben">
+        <button onclick="validateInput()">Prüfen</button>
+        <div class="message" id="message"></div>
     </div>
-    
-    <script src="script.js"></script>
-    <script src="ampelzustand.js"></script> <!-- Hier wird die separate JavaScript-Datei eingebunden -->
-    <link rel="stylesheet" href="style.css">
+
+    <script>
+        function validateInput() {
+            const correctWord = "neige";
+            const userInput = document.getElementById("inputField").value;
+            const messageElement = document.getElementById("message");
+
+            if (userInput.toLowerCase() === correctWord) {
+                messageElement.style.color = "green";
+                messageElement.textContent = "Glückwunsch!";
+            } else {
+                messageElement.style.color = "red";
+                messageElement.textContent = "Leider falsch.";
+            }
+        }
+    </script>
 </body>
 </html>
